@@ -66,3 +66,18 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+
+This section is written by Clark Abbott
+To make this application work, you must follow these steps. 
+1. Download Ganache, make a quickstart blockchain network, copy the MNEMONIC at the top of the page. You will use this to log into metamask. 
+2. Open the metamask extension on your browser. Login using the MNEMONIC from ganache. 
+3. In metamask, click the 'Network' button at the top of the page. Choose Custom RPC.
+    - Network Name: Private Network. 
+    - New RPC URL: HTTP://127.0.0.1:7545 
+        This is found in Ganache at the top of the screen underneath 'RPC Server'. We use this to 1. Connect our ganache to metamask 2. Inject our metamask web3 into the browser 3. Allow our application to recognize the injection from this source 
+    - Chain ID: 1337
+    - No optional fields. 
+Once logged in, my user and pass were both testtest but I dont think this matters bc its local. 
+4. npm start the application. Refresh until you get a notification in the metamask checking if you want the browser to be used. Say yes. Refresh the web page until the account address is displaying, proving the app is connected to metamask. 
